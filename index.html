@@ -22,6 +22,13 @@
         var gameInstance = UnityLoader.instantiate("gameContainer", "Unity/WebGL/Epic/Build/WebGL.json", { onProgress: UnityProgress });
     </script>
 
+    <!--YanohaAdventures webGL Import-->
+    <script src="Unity/WebGL/YanohaAdventures/TemplateData/UnityProgress.js"></script>
+    <script src="Unity/WebGL/YanohaAdventures/Build/UnityLoader.js"></script>
+    <script>
+        var gameInstance = UnityLoader.instantiate("gameContainer2", "Unity/WebGL/Epic/Build/WebGL.json", { onProgress: UnityProgress });
+    </script>
+
 </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -153,14 +160,24 @@
                     <!--Project 2-->
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">project 2</h3>
-                            <div class="subheading mb-3">Description</div>
-                            <p>Content</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Date</span></div>
-                    </div>
-                </div>
-            </section>
+                            <h3 class="mb-0">Yanoha Adventures</h3>
+                            <div class="subheading mb-3">A demo of Third person controller, Third person camera controls using cinemachine, and Animation controller</div>
+                            <div class="webgl-content">
+                                <div id="gameContainer2" style="width: 960px; height: 600px"></div>
+                                <div class="footer">
+                                    <div class="webgl-logo"></div>
+                                    <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+                                    <div class="title">
+                                        <ul>
+                                            <li>Character model made by Millino (https://twitter.com/millino/)</li>
+                                            <li>Character animations taken from Maximo</li>
+                                            <li>Scripting and Project by Tina Nguyen</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex-shrink-0"><span class="text-primary">[Currently Developing]</span></div>
+                                </div>
+                            </div>
+</section>
             <hr class="m-0" />
             <!-- 3Dmodeling-->
             <section class="resume-section" id="3Dmodeling">
