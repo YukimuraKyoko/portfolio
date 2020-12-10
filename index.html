@@ -15,6 +15,30 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 
+    <!--Button Style-->
+    .button {
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 24px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+
+    .button:hover {background-color: #3e8e41}
+
+    .button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+    
     <!--Epic Roll A ball WebGL Import-->
     <!--
     <script src="Unity/WebGL/Epic/TemplateData/UnityProgress.js"></script>
@@ -166,21 +190,16 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Yanoha Adventures</h3>
                             <div class="subheading mb-3">A demo of Third person controller, Third person camera controls using cinemachine, and Animation controller</div>
-                            <div class="webgl-content">
-                                <div id="gameContainer" style="width: 960px; height: 600px"></div>
-                                <div class="footer">
-                                    <div class="webgl-logo"></div>
-                                    <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-                                    <div class="title">
+                            <a href="Unity/WebGL/YanohaAdventures/index.html"><button class="button">Open game</button></a>
                                         <ul>
                                             <li>Character model made by Millino (https://twitter.com/millino/)</li>
                                             <li>Character animations taken from Maximo</li>
                                             <li>Scripting and Project by Tina Nguyen</li>
                                         </ul>
-                                    </div>
-                                    <div class="flex-shrink-0"><span class="text-primary">[Currently Developing]</span></div>
-                                </div>
-                            </div>
+                              
+                            <div class="flex-shrink-0"><span class="text-primary">[Currently Developing]</span></div>
+                        </div>
+                    </div>
 </section>
             <hr class="m-0" />
             <!-- 3Dmodeling-->
