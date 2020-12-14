@@ -41,9 +41,21 @@
       transform: translateY(4px);
     }
 
-    canvas {
-        display: block;
-    } 
+    .p5js{
+        width:55%;
+        margin-right:2%;
+        float:left;
+    }
+    .p5js iframe{
+        width:100%
+    }
+    .p5code{
+        width:42%;
+        float:left;
+    }
+    .clearfix{
+        clear:both
+    }
     </style>
     <!--import p5-->
     <script src="p5/p5.js"></script>
@@ -138,12 +150,16 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">project 1</h3>
-                            <p>test</p>
+                            
                            
 
-                            
-                            
-                            <iframe src="https://yukimurakyoko.github.io/p5/bouncingrainbow.html" scrolling="no" width="500px" height="500px"></iframe>
+                            <div class="p5js">
+                                <iframe src="https://yukimurakyoko.github.io/p5/bouncingrainbow.html" scrolling="no" width="500px" height="500px"></iframe>
+                            </div>
+                            <div class="p5code">
+                                <p>test</p>
+                            </div>
+                            <div class="clearfix"></div>
                              
                             <div class="subheading mb-3">Description</div>
                             <p>Content</p>
