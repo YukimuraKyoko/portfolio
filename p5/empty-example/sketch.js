@@ -4,7 +4,9 @@ let canvasH = 800;
 let canvasW = 600;
 
 var setup = function(){
-  createCanvas(canvasH, canvasW);
+  
+  var myCanvas = createCanvas(canvasH, canvasW);
+  myCanvas.parent("BouncingRainbowJS")
 }
 
 
