@@ -1,3 +1,4 @@
+new p5();
 //Floor pixel limit: 560
 var Floor = 560;
 //-------------------------Variables/Setup---------------------------
@@ -5,7 +6,6 @@ var idleStart = 1;
 var walkStart = 1;
 var runStart = 1;
 var jumpStart = 1;
-size(1280, 720);
 var bg1 = loadImage("bg1.png");
 var keyZ = loadImage("keyZ_48px.png");
 var keySpace = loadImage("keySpace_48px.png");
@@ -33,13 +33,11 @@ var dirR = true;
 var under = false;
 
 
-var Screen = {
-  x: 1280,
-  y: 720
-};
+
 
 var setup = function(){
   frameRate(30);
+  createCanvas(1280,720)
 };
 
 var player = {
@@ -53,6 +51,7 @@ var player = {
 
 
 var boxes = [{xpos: 500, ypos: 500, width:200, height: 5}];
+
 
 //-----------------------------Initial Loading---------------------------
 
@@ -127,20 +126,20 @@ var draw = function() {
 //-----------------------------Functions---------------------------
 
 var keyPressed = function(){
-  if(keyCode === RIGHT || keyCode === 68){
+  if(keyCode === RIGHT_ARROW || keyCode === 68){
     right = true;
     dirR = true;
     dirL = false;
   }
-  if(keyCode === LEFT || keyCode === 65){
+  if(keyCode === LEFT_ARROW || keyCode === 65){
     left = true;
     dirL = true;
     dirR = false;
   }
-  if(keyCode === UP || keyCode === 87){
+  if(keyCode === UP_ARROW || keyCode === 87){
     up = true;
   }
-  if(keyCode === DOWN || keyCode ===83){
+  if(keyCode === DOWN_ARROW || keyCode ===83){
     down = true;
   }
   //SpaceKey
@@ -158,16 +157,16 @@ var keyPressed = function(){
 
 
 var keyReleased = function(){
-  if(keyCode === RIGHT || keyCode === 68){
+  if(keyCode === RIGHT_ARROW || keyCode === 68){
     right = false;
   }
-  if(keyCode === LEFT || keyCode === 65){
+  if(keyCode === LEFT_ARROW || keyCode === 65){
     left = false;
   }
-  if(keyCode === UP || keyCode === 87){
+  if(keyCode === UP_ARROW || keyCode === 87){
     up = false;
   }
-  if(keyCode === DOWN || keyCode ===83){
+  if(keyCode === DOWN_ARROW || keyCode ===83){
     down = false;
   }
   //SpaceKey
@@ -243,12 +242,12 @@ var runRightAnimation = function(){
 };
 
 var runLeftAnimation = function(){
-  pushMatrix();
+  resetMatrix();
     translate(player.xpos, player.ypos);
     scale(-1.0, 1.0
     );
     image(runUse, - walkUse.width + 300,0,player.size,player.size);
-    popMatrix();
+    applyMatrix();
 };
 
 var jumpRightAnimation = function(){
@@ -256,20 +255,20 @@ var jumpRightAnimation = function(){
 };
 
 var jumpLeftAnimation = function(){
-  pushMatrix();
+  resetMatrix();
     translate(player.xpos, player.ypos);
     scale(-1.0, 1.0);
     image(jumpUse, - idleUse.width + 300,0,player.size,player.size);
-  popMatrix();
+    applyMatrix();
     
 };
 
 var walkLeftAnimation = function(){
-  pushMatrix();
+  resetMatrix();
     translate(player.xpos, player.ypos);
     scale(-1.0, 1.0);
     image(walkUse, - idleUse.width + 300,0,player.size,player.size);
-  popMatrix();
+    applyMatrix();
 };
 
 var walkRightAnimation = function(){
@@ -417,7 +416,7 @@ var playerAnimationController = function(){
   
   else if(dirL) {
     
-    pushMatrix();
+    resetMatrix();
     translate(player.xpos, player.ypos);
     scale(-1.0, 1.0);
         if(jumpu || player.ypos != Floor){
@@ -434,7 +433,7 @@ var playerAnimationController = function(){
         else {
         image(idleUse, - idleUse.width + 300,0,player.size,player.size);
         }
-    popMatrix();
+    applyMatrix();
     
   } 
   
