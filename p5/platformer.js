@@ -34,7 +34,7 @@ var under = false;
 
 
 var Screen = {
-  x: 1280,
+  x: 720,
   y: 720
 }
 
@@ -238,7 +238,7 @@ var UI = function(){
   image(keySpace, 30, 80, 48, 48);
   text("= Jump", 90, 110);
   text("Gravity: " + gravity, 250,100);
-  text("canJump: " + canJump, 600, 100);
+  text("canJump: " + canJump, 500, 50);
 };
 
 var runRightAnimation = function(){
@@ -297,23 +297,23 @@ var drawBG = function(){
   image(bg1,-(2*Screen.x)+scrolling,0,Screen.x,Screen.y);
   
   //BG Scrolling
-  if (player. xpos > 800){
+  if (player. xpos > Screen.x - Screen.x/4){
     if(running){
       scrolling -= player.speed*2;
     }
     else{
       scrolling -= player.speed;
     }
-    player.xpos = 800;
+    player.xpos = Screen.x - Screen.x/4;
   }
-  if (player.xpos < 350){
+  if (player.xpos < Screen.x/4){
     if(running){
       scrolling += player.speed*2;
     }
     else{
       scrolling += player.speed;
     }
-    player.xpos = 350;
+    player.xpos = Screen.x/4);
   }
 };
 
