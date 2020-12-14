@@ -33,11 +33,14 @@ var dirR = true;
 var under = false;
 
 
-
+var Screen = {
+  x: 1280,
+  y: 720
+}
 
 var setup = function(){
   frameRate(30);
-  createCanvas(1280,720)
+  createCanvas(Screen.x,Screen.y)
 };
 
 var player = {
