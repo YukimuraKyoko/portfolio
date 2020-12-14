@@ -40,7 +40,7 @@ var Screen = {
 
 var setup = function(){
   frameRate(30);
-  createCanvas(Screen.x,Screen.y)
+  createCanvas(720,720)
 };
 
 var player = {
@@ -89,6 +89,7 @@ var draw = function() {
   timer++;
   
   drawBG();
+  UI();
   smooth();
   //noFill();
   strokeWeight(5);
@@ -122,7 +123,7 @@ var draw = function() {
  playerAnimationController();
  
 
-  UI();
+  
 };
 
 
@@ -267,7 +268,7 @@ var jumpLeftAnimation = function(){
 };
 
 var walkLeftAnimation = function(){
-  resetMatrix();
+    resetMatrix();
     translate(player.xpos, player.ypos);
     scale(-1.0, 1.0);
     image(walkUse, - idleUse.width + 300,0,player.size,player.size);
