@@ -313,7 +313,7 @@ var drawBG = function(){
     else{
       scrolling += player.speed;
     }
-    player.xpos = Screen.x/4);
+    player.xpos = Screen.x/4;
   }
 };
 
