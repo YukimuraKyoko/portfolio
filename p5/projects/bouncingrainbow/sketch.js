@@ -1,7 +1,7 @@
 new p5(); //to allow usage of random() without defining it in setup()
 
-let canvasH = 800;
-let canvasW = 600;
+let canvasH = 500;
+let canvasW = 500;
 
 var setup = function(){
   
