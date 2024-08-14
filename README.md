@@ -2,4 +2,4 @@
 
 Here you can find my works at 
 
-yukimurakyoko.github.io
+yukimurakyoko.github.io/resume
